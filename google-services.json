@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "755301765177",
+    "firebase_url": "https://yarsiair-f0f19-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "yarsiair-f0f19",
+    "storage_bucket": "yarsiair-f0f19.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755301765177:android:fe78e8e103c65722c6fde8",
+        "android_client_info": {
+          "package_name": "com.yarsiair.yarsiair"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd2XfvKHzVJ2LwI8KWYierfuSyVFvMuWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

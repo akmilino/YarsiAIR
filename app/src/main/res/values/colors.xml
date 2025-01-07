@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green_01">#027F45</color>
+    <color name="blue_01">#59D2FE</color>
+<!--    transparent -->
+    <color name="blue_transparent">#3D59D2FE</color>
+<!--  gradient  -->
+    <color name="green_gradient">#17d071</color>
+    <color name="yellow_gradient">#cea401</color>
+    <color name="orange_gradient">#cb6711</color>
+    <color name="red_gradient">#892503</color>
+    <color name="purple_gradient">#9314b7</color>
+    <color name="grey_gradient">#766470</color>
+</resources>
