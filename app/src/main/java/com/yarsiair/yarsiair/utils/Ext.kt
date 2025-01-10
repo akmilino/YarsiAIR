@@ -16,17 +16,6 @@ fun Int.toStatus(): Int {
     }
 }
 
-fun Int.toStatusAqiKecil(): Int {
-    return when (this) {
-        in Status.GOOD.min..Status.GOOD.max -> R.drawable.ic_small_bagus
-        in Status.MEDIUM.min..Status.MEDIUM.max -> R.drawable.ic_small_sedang
-        in Status.UNHEALTHY_FOR_SENSITIVE_GROUPS.min..Status.UNHEALTHY_FOR_SENSITIVE_GROUPS.max -> R.drawable.ic_small_kelompok_sensitif
-        in Status.UNHEALTHY.min..Status.UNHEALTHY.max -> R.drawable.ic_small_tidak_sehat
-        in Status.VERY_UNHEALTHY.min..Status.VERY_UNHEALTHY.max -> R.drawable.ic_small_tidak_sehat
-        in Status.VERY_UNHEALTHY_SEVERE.min..Status.VERY_UNHEALTHY_SEVERE.max -> R.drawable.ic_small_tidak_sehat
-        else -> throw IllegalArgumentException("Value $this is out of range")
-    }
-}
 
 fun Int.toStatusName(): String {
     return when (this) {

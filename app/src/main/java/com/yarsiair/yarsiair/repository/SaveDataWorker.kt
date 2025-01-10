@@ -39,7 +39,7 @@ class SaveDataWorker(appContext: Context, workerParams: WorkerParameters) : Coro
 
     private fun scheduleNextWork(context: Context) {
         val workRequest = OneTimeWorkRequestBuilder<SaveDataWorker>()
-            .setInitialDelay(1, TimeUnit.HOURS) // Untuk setting waktu history
+            .setInitialDelay(1, TimeUnit.MINUTES) // Untuk setting waktu history
             .build()
 
         WorkManager.getInstance(context).enqueueUniqueWork(

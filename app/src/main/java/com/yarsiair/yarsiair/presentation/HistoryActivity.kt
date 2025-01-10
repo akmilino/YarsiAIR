@@ -1,10 +1,13 @@
 package com.yarsiair.yarsiair.presentation
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.ViewModelProvider
@@ -25,6 +28,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.concurrent.TimeUnit
 import androidx.work.PeriodicWorkRequestBuilder
+import com.yarsiair.yarsiair.R
+import com.yarsiair.yarsiair.databinding.CustomDialogConfirmDeleteBinding
 
 
 class HistoryActivity : AppCompatActivity() {
@@ -52,11 +57,43 @@ class HistoryActivity : AppCompatActivity() {
 
         // Tombol Clear History
         binding.btnRestartHistory.setOnClickListener {
-            viewModel.clearHistory()
-            Toast.makeText(this, "History cleared.", Toast.LENGTH_SHORT).show()
+            showConfirmDeleteDialog {
+                // Hapus history jika pengguna memilih "Yes"
+                viewModel.clearHistory()
+                Toast.makeText(this, "History cleared.", Toast.LENGTH_SHORT).show()
+            }
         }
 
+    }
 
+
+
+
+
+    // Fungsi untuk menampilkan custom dialog Yes/No
+    private fun showConfirmDeleteDialog(onConfirm: () -> Unit) {
+        // Gunakan ViewBinding untuk inflasi layout dialog
+        val dialogBinding = CustomDialogConfirmDeleteBinding.inflate(layoutInflater)
+
+        // Buat AlertDialog
+        val dialog = AlertDialog.Builder(this, R.style.CustomDialogStyle)
+            .setView(dialogBinding.root)
+            .setCancelable(false) // Dialog tidak bisa ditutup dengan back button
+            .create()
+
+        // Aksi untuk tombol Yes
+        dialogBinding.btnYes.setOnClickListener {
+            onConfirm() // Jalankan callback untuk menghapus history
+            dialog.dismiss()
+        }
+
+        // Aksi untuk tombol No
+        dialogBinding.btnNo.setOnClickListener {
+            dialog.dismiss() // Tutup dialog tanpa melakukan tindakan
+        }
+
+        // Tampilkan dialog
+        dialog.show()
     }
 
     private fun setupUi() {

@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.yarsiair.yarsiair.databinding.ItemListHistoryBinding
 import com.yarsiair.yarsiair.models.HistoryEntity
-import com.yarsiair.yarsiair.utils.toStatusAqiKecil
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

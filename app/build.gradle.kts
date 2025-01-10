@@ -43,6 +43,10 @@ android {
 
 dependencies {
 
+
+    implementation ("androidx.cardview:cardview:1.0.0")
+
+
     // Room Database
     val roomVersion = "2.6.0"
     implementation("androidx.room:room-runtime:$roomVersion")

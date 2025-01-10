@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style untuk Dialog -->
+    <style name="CustomDialogStyle" parent="Theme.AppCompat.Dialog">
+        <!-- Background dialog dibuat transparan -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- Menghilangkan padding default -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

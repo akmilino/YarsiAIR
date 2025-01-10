@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">YarsiAIR</string>
-    <string name="kontol">YarsiAIR</string>
     <string name="degree_template">%1$s°</string>
 </resources>

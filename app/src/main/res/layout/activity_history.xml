@@ -121,20 +121,33 @@
             app:layout_constraintTop_toBottomOf="@id/view"
             tools:listitem="@layout/item_list_history" />
 
+
+        <TextView
+            android:id="@+id/textviwreset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="Data riwayat menggunakan memori ponsel. \nHapus data riwayat dengan menekan tombol Hapus Riwayat"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_history" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_restart_history"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/green_01"
-            android:text="Restart History"
+            android:text="Hapus Riwayat"
             app:cornerRadius="10dp"
             android:layout_marginBottom="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_history" />
+            app:layout_constraintTop_toBottomOf="@id/textviwreset" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
